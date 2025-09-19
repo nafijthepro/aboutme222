@@ -58,7 +58,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-4 text-xs text-foreground/50 flex items-center hover:text-foreground/80 transition-colors duration-300 cursor-pointer">
-            CREATED BY NAFIJ RAHAMAN (NAFIJ, NAFIJUR) WITH GEMINI PRO
+            CREATED BY NAFIJ RAHAMAN ⚡
             <Heart className="w-4 h-4 text-red-500 ml-1.5 animate-heart-pulse hover:scale-125 transition-transform duration-300" fill="currentColor" />
           </p>
         </div>
