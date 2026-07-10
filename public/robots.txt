@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /projectadd
+Disallow: /api/
+
+Sitemap: https://nafij.me/sitemap.xml
