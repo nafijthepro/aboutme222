@@ -93,6 +93,7 @@ export default function IntroVideo() {
         loop
         playsInline
         muted={isMuted}
+        preload="none"
       >
         <track kind="captions" src="/captions.vtt" srcLang="en" label="English" default />
       </video>

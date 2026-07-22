@@ -87,11 +87,8 @@ export default function Hero() {
       </div>
 
       {/* Two Column Grid */}
-      <motion.div
+      <div
         className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
       >
 
         {/* Left Column (Text & Details) */}
@@ -104,24 +101,23 @@ export default function Hero() {
             </Badge>
           </motion.div>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] text-foreground electric-line"
+          <h1
+            className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] text-foreground electric-line animate-fade-in-up"
           >
             Hello, I&apos;m <br />
             <span className="bg-gradient-to-r from-cyan-400 via-primary to-purple-500 bg-clip-text text-transparent hover:brightness-110 transition-all duration-500 select-all cursor-pointer glitch-text text-glow-primary">
               NAFIJ RAHAMAN
             </span>.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl"
+          <p
+            className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl animate-fade-in-up"
+            style={{ animationDelay: '100ms' }}
           >
             I completed my SSC in 2022 and am currently studying in the <strong>Electrical Technology</strong> department at <strong>Magura Polytechnic Institute</strong>.
             Originally from <em>Borobongram, Pangsha, Rajbari</em>, I am a professional Full Stack Developer specializing in building modern web applications.
             I use React, Next.js, Node.js, MongoDB, and Firebase to craft responsive, performant, and premium digital solutions.
-          </motion.p>
+          </p>
 
           {/* Call to Actions */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 w-full pt-4">
@@ -206,7 +202,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-      </motion.div>
+      </div>
 
       {/* Horizontal Progress Skills Section at Bottom */}
       <div className="relative z-10 w-full mt-20 max-w-7xl">

@@ -109,9 +109,7 @@ export default function Home() {
         
         <main className="flex-1 relative z-10">
           {/* ─── Hero Section ─── */}
-          <ScrollRevealWrapper type="up">
-            <Hero />
-          </ScrollRevealWrapper>
+          <Hero />
 
           {/* ─── Intro Video Section ─── */}
           <ScrollRevealWrapper type="up" delay={150}>

@@ -96,12 +96,12 @@ export default {
           '0%, 100%': {
             backgroundColor: 'hsl(var(--primary))',
             transform: 'scale(1)',
-            boxShadow: '0 0 0 0 hsl(var(--primary) / 0.7)',
+            opacity: '1',
           },
           '50%': {
             backgroundColor: 'hsl(var(--accent))',
             transform: 'scale(1.25)',
-            boxShadow: '0 0 10px 5px hsl(var(--accent) / 0.3)',
+            opacity: '0.85',
           },
         },
         'fade-in': {

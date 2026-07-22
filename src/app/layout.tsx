@@ -107,6 +107,7 @@ export default async function RootLayout({
       <head>
         <link rel="preconnect" href="https://cdn.onesignal.com" />
         <link rel="preconnect" href="https://api.onesignal.com" />
+        <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#29abe2" />
         <meta name="mobile-web-app-capable" content="yes" />
