@@ -14,6 +14,55 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const allKeywords = [
+  'nafijthepro',
+  'nafijrahaman',
+  'nafij',
+  'nafizrahaman',
+  'nafizkhan',
+  'nafisrahaman',
+  'nafijpro',
+  'nafij from rajbari',
+  'nafij developer',
+  'nafij a good boy student',
+  'nafij ahmed',
+  'nafijur rahaman',
+  'nafijurrahaman',
+  'NAFIJ RAHAMAN',
+  'NAFIJ',
+  'NAFIJUR',
+  'NAFIJUR RAHAMAN',
+  'NafijPro',
+  'Nafij The Pro',
+  'Nafijur Rahaman',
+  'Nafiz',
+  'Nafis',
+  'Nafijur',
+  'NafijurRahaman',
+  'NafizRahaman',
+  'NafizKhan',
+  'NafijAhmed',
+  'nafij.me',
+  'nafijrahaman.me',
+  'nafij.ninja',
+  'nafij.dev',
+  'nafijrahaman.dev',
+  'nafijrahaman.pro.bd',
+  'Full Stack Developer',
+  'React Developer',
+  'Next.js Developer',
+  'Web Developer',
+  'Student Developer',
+  'Magura Polytechnic',
+  'JavaScript',
+  'TypeScript',
+  'Node.js',
+  'MongoDB',
+  'Firebase',
+  'Bangladesh Developer',
+  'Professional Web Developer'
+].join(', ');
+
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
   const host = headersList.get('host') || 'nafijrahaman.me';
@@ -21,13 +70,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteUrl = `${protocol}://${host}`;
 
   return {
-    title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | NAFIJ | NAFIJUR | NafijPro Portfolio',
-    description: "NAFIJ RAHAMAN - Professional Full Stack Developer and Student at Magura Polytechnic Institute. Specializing in React, Next.js, Node.js, MongoDB, Firebase and modern web technologies. Contact NAFIJ for professional web development services.",
-    keywords: 'nafijrahaman, nafijur rahaman, nafijurrahaman, nafij, nafis, nafiz rahaman, nafiz khan, nafij ahmed, nafij.me, nafijrahaman.me, nafij.ninja, nafij.dev, nafijrahaman.dev, nafijrahaman.pro.bd, NAFIJ RAHAMAN, NAFIJ, NAFIJUR, NAFIJUR RAHAMAN, NafijPro, Nafij The Pro, Nafijur Rahaman, Nafiz, Nafis, Nafijur, NafijurRahaman, NafizRahaman, NafizKhan, NafijAhmed, Full Stack Developer, React Developer, Next.js Developer, Web Developer, Student Developer, Magura Polytechnic, JavaScript, TypeScript, Node.js, MongoDB, Firebase, Bangladesh Developer, Professional Web Developer',
+    title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | nafijthepro | nafij.me Portfolio',
+    description: "NAFIJ RAHAMAN (nafijthepro, nafijrahaman, nafij, nafizrahaman, nafizkhan, nafisrahaman, nafijpro, nafij from rajbari, nafij developer, nafij a good boy student) - Professional Full Stack Developer & Electrical Technology Student at Magura Polytechnic Institute specializing in React, Next.js, Node.js, MongoDB, and Firebase.",
+    keywords: allKeywords,
     authors: [{ name: 'Nafij Rahaman', url: siteUrl }],
-    creator: 'NAFIJ RAHAMAN',
+    creator: 'NAFIJ RAHAMAN (nafijthepro)',
     publisher: 'NAFIJ RAHAMAN',
-    robots: 'index, follow',
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     alternates: {
       canonical: siteUrl,
       languages: {
@@ -48,8 +97,8 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       locale: 'en_US',
       url: siteUrl,
-      title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | NAFIJ | NAFIJUR Portfolio',
-      description: 'NAFIJ RAHAMAN (nafijrahaman, nafijur rahaman, nafijurrahaman, nafij, nafis, nafiz rahaman, nafiz khan, nafij ahmed) - Professional Full Stack Developer and Student specializing in React, Next.js, Node.js, MongoDB, Firebase. Contact NAFIJ for professional web development services.',
+      title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | nafijthepro Portfolio',
+      description: 'NAFIJ RAHAMAN (nafijthepro, nafijrahaman, nafij, nafizrahaman, nafizkhan, nafisrahaman, nafijpro, nafij from rajbari, nafij developer) - Professional Full Stack Developer and Electrical Technology Student specializing in React, Next.js, Node.js, MongoDB, and Firebase.',
       siteName: 'NAFIJ RAHAMAN Portfolio',
       images: [
         {
@@ -62,8 +111,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | NAFIJ | NAFIJUR',
-      description: 'NAFIJ RAHAMAN - Professional Full Stack Developer and Student specializing in React, Next.js, Node.js, MongoDB, Firebase and modern web technologies.',
+      title: 'NAFIJ RAHAMAN - Full Stack Developer | Student | nafijthepro',
+      description: 'NAFIJ RAHAMAN (nafijthepro, nafijrahaman, nafij, nafizrahaman, nafizkhan, nafisrahaman, nafijpro) - Professional Full Stack Developer and Student specializing in React, Next.js, Node.js, MongoDB, and Firebase.',
       creator: '@nafijrahaman',
       images: ['https://nafijrahaman.github.io/nafijrahaman.png'],
     },
@@ -102,6 +151,125 @@ export default async function RootLayout({
   const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
   const siteUrl = `${protocol}://${host}`;
 
+  const jsonLdGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        "name": "NAFIJ RAHAMAN",
+        "alternateName": [
+          "nafijthepro",
+          "nafijrahaman",
+          "nafij",
+          "nafizrahaman",
+          "nafizkhan",
+          "nafisrahaman",
+          "nafijpro",
+          "nafij from rajbari",
+          "nafij developer",
+          "nafij a good boy student",
+          "nafij ahmed",
+          "nafijur rahaman",
+          "nafijurrahaman",
+          "NAFIJ RAHAMAN",
+          "NAFIJ",
+          "NAFIJUR",
+          "NAFIJUR RAHAMAN",
+          "NafijPro",
+          "Nafij The Pro",
+          "Nafijur Rahaman",
+          "Nafiz",
+          "Nafis",
+          "Nafijur",
+          "NafijurRahaman",
+          "NafizRahaman",
+          "NafizKhan",
+          "NafijAhmed"
+        ],
+        "url": siteUrl,
+        "image": "https://nafijrahaman.github.io/nafijrahaman.png",
+        "email": "admin@nafij.me",
+        "telephone": "+8801943873547",
+        "jobTitle": "Full Stack Developer & Electrical Technology Student",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Borobongram, Pangsha, Rajbari",
+          "addressCountry": "Bangladesh"
+        },
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Magura Polytechnic Institute"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Magura Polytechnic Institute"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+8801943873547",
+          "contactType": "customer service",
+          "email": "admin@nafij.me",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English", "Bengali"]
+        },
+        "sameAs": [
+          "https://nafij.me",
+          "https://nafijrahaman.me",
+          "https://nafij.ninja",
+          "https://nafij.dev",
+          "https://nafijrahaman.dev",
+          "https://nafijrahaman.pro.bd",
+          "https://github.com/nafijrahaman",
+          "https://facebook.com/nafijrahaman2023",
+          "https://instagram.com/nafijrahaman.me",
+          "https://twitter.com/nafijrahaman"
+        ],
+        "knowsAbout": [
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "JavaScript",
+          "TypeScript",
+          "MongoDB",
+          "Firebase",
+          "Electrical Technology",
+          "Full Stack Development",
+          "Web Development",
+          "Professional Web Development Services"
+        ],
+        "description": "NAFIJ RAHAMAN (also known as nafijthepro, nafijrahaman, nafij, nafizrahaman, nafizkhan, nafisrahaman, nafijpro, nafij from rajbari, nafij developer, nafij a good boy student) is a Professional Full Stack Developer and Electrical Technology student at Magura Polytechnic Institute, originally from Borobongram, Pangsha, Rajbari, Bangladesh. Specialist in Next.js, React, Node.js, and web application engineering."
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "url": siteUrl,
+        "name": "NAFIJ RAHAMAN - Official Web Portfolio",
+        "alternateName": [
+          "Nafij Pro Portfolio",
+          "nafij.me",
+          "nafijrahaman.me",
+          "nafij.ninja",
+          "nafij.dev",
+          "nafijrahaman.dev",
+          "nafijrahaman.pro.bd"
+        ],
+        "publisher": {
+          "@id": `${siteUrl}/#person`
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": `${siteUrl}/#profilepage`,
+        "url": siteUrl,
+        "name": "NAFIJ RAHAMAN Profile & Portfolio",
+        "mainEntity": {
+          "@id": `${siteUrl}/#person`
+        }
+      }
+    ]
+  };
+
   return (
     <html lang="en" className={cn('!scroll-smooth', inter.variable)} suppressHydrationWarning>
       <head>
@@ -118,7 +286,7 @@ export default async function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
 
         {/* SEO Meta Tags */}
-        <meta name="author" content="Nafij Rahaman" />
+        <meta name="author" content="Nafij Rahaman (nafijthepro)" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <link rel="canonical" href={siteUrl} />
@@ -127,85 +295,11 @@ export default async function RootLayout({
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:site" content="@nafijrahaman" />
 
-        {/* Structured Data */}
+        {/* Structured Data (@graph for AI & Search Engines) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "NAFIJ RAHAMAN",
-              "alternateName": [
-                "nafijrahaman",
-                "nafijur rahaman",
-                "nafijurrahaman",
-                "nafij",
-                "nafis",
-                "nafiz rahaman",
-                "nafiz khan",
-                "nafij ahmed",
-                "NAFIJ RAHAMAN",
-                "NAFIJ",
-                "NAFIJUR",
-                "NAFIJUR RAHAMAN",
-                "NafijPro",
-                "Nafij The Pro",
-                "Nafijur Rahaman",
-                "Nafiz",
-                "Nafis",
-                "Nafijur",
-                "NafijurRahaman",
-                "NafizRahaman",
-                "NafizKhan",
-                "NafijAhmed"
-              ],
-              "url": siteUrl,
-              "image": "https://nafijrahaman.github.io/nafijrahaman.png",
-              "email": "admin@nafij.me",
-              "telephone": "+8801943873547",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+8801943873547",
-                "contactType": "customer service",
-                "email": "admin@nafij.me",
-                "areaServed": "Worldwide",
-                "availableLanguage": ["English", "Bengali"]
-              },
-              "sameAs": [
-                "https://nafij.me",
-                "https://nafijrahaman.me",
-                "https://nafij.ninja",
-                "https://nafij.dev",
-                "https://nafijrahaman.dev",
-                "https://nafijrahaman.pro.bd",
-                "https://github.com/nafijrahaman",
-                "https://facebook.com/nafijrahaman2023",
-                "https://instagram.com/nafijrahaman.me",
-                "https://twitter.com/nafijrahaman"
-              ],
-              "jobTitle": "Full Stack Developer",
-              "worksFor": {
-                "@type": "EducationalOrganization",
-                "name": "Magura Polytechnic Institute"
-              },
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Magura Polytechnic Institute"
-              },
-              "knowsAbout": [
-                "React.js",
-                "Next.js",
-                "Node.js",
-                "JavaScript",
-                "TypeScript",
-                "MongoDB",
-                "Firebase",
-                "Full Stack Development",
-                "Web Development",
-                "Professional Web Development Services"
-              ],
-              "description": "NAFIJ RAHAMAN (nafijrahaman, nafijur rahaman, nafijurrahaman, nafij, nafis, nafiz rahaman, nafiz khan, nafij ahmed) - Professional Full Stack Developer and Student at Magura Polytechnic Institute offering professional web development services across nafij.me, nafijrahaman.me, nafij.ninja, and related platforms."
-            })
+            __html: JSON.stringify(jsonLdGraph)
           }}
         />
 
