@@ -91,7 +91,7 @@ export default function Hero() {
         className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full"
         variants={containerVariants}
         initial="hidden"
-        animate={mounted ? 'visible' : 'hidden'}
+        animate="visible"
       >
 
         {/* Left Column (Text & Details) */}
@@ -216,7 +216,7 @@ export default function Hero() {
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, y: 20 }}
-              animate={mounted ? { opacity: 1, y: 0 } : {}}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 + index * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="text-left bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-4 hover:bg-primary/5 hover:border-primary/30 transition-all duration-300 cursor-pointer group hover:-translate-y-1 hover:shadow-lg tech-corner neon-border hover-ripple"
             >

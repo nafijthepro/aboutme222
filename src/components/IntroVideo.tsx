@@ -9,7 +9,6 @@ export default function IntroVideo() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  const [showSoundPrompt, setShowSoundPrompt] = useState(true);
 
   // Autoplay/pause on scroll
   useEffect(() => {
@@ -47,7 +46,6 @@ export default function IntroVideo() {
 
       video.muted = false;
       setIsMuted(false);
-      setShowSoundPrompt(false);
       video.play()
         .then(() => setIsPlaying(true))
         .catch((err) => console.log('Play triggered by Hero failed:', err));
@@ -79,9 +77,6 @@ export default function IntroVideo() {
 
     video.muted = !video.muted;
     setIsMuted(video.muted);
-    if (!video.muted) {
-      setShowSoundPrompt(false);
-    }
   };
 
   return (
@@ -235,20 +230,7 @@ export default function IntroVideo() {
 
       {/* Bottom Right: Audio Controls */}
       <div className="absolute bottom-6 right-6 z-[20] flex items-center gap-3">
-        {/* Pulsing prompt if video is muted and playing */}
-        <AnimatePresence>
-          {isMuted && isPlaying && showSoundPrompt && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              onClick={toggleMute}
-              className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-md text-primary text-xs font-mono font-semibold cursor-pointer animate-pulse select-none flex items-center gap-1.5 shadow-lg"
-            >
-              <span>🔊 Tap for Thunder Sound</span>
-            </motion.div>
-          )}
-        </AnimatePresence>
+
 
         <button
           onClick={toggleMute}
