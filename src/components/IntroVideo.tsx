@@ -93,7 +93,9 @@ export default function IntroVideo() {
         loop
         playsInline
         muted={isMuted}
-      />
+      >
+        <track kind="captions" src="/captions.vtt" srcLang="en" label="English" default />
+      </video>
 
       {/* 50% Opacity Black Overlay */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none z-[1]" />

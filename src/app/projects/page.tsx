@@ -391,6 +391,7 @@ function ProjectCard({ project, index, mounted }: { project: Project; index: num
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Live Demo of ${project.title}`}
                 >
                   <Globe className="w-4 h-4 mr-2" />
                   Live Demo

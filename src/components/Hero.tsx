@@ -175,10 +175,9 @@ export default function Hero() {
             {/* The image container — bigger on desktop */}
             <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] xl:w-[480px] xl:h-[480px] rounded-3xl overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-all duration-500 shadow-2xl group-hover:shadow-primary/20">
               <Image
-                src="https://nafijrahaman.github.io/nafijrahaman.png"
+                src="/nafijrahaman.png"
                 alt="Nafij Rahaman - Full Stack Developer"
                 fill
-                unoptimized
                 sizes="(max-width: 768px) 280px, (max-width: 1024px) 380px, (max-width: 1280px) 420px, 480px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 priority
@@ -224,10 +223,10 @@ export default function Hero() {
               <div className="tech-corner-inner absolute inset-0 pointer-events-none" />
               
               <div className="flex justify-between items-center mb-2">
-                <h3 className="font-semibold text-sm text-foreground/90 group-hover:text-primary transition-colors duration-300">{skill.name}</h3>
+                <p className="font-semibold text-sm text-foreground/90 group-hover:text-primary transition-colors duration-300">{skill.name}</p>
                 <span className="text-xs font-semibold text-primary group-hover:scale-110 transition-transform duration-300">{skill.value}%</span>
               </div>
-              <Progress value={skill.value} className="h-1.5 group-hover:h-2 transition-all duration-300" />
+              <Progress value={skill.value} aria-label={`${skill.name} proficiency`} className="h-1.5 group-hover:h-2 transition-all duration-300" />
             </motion.div>
           ))}
         </div>
@@ -236,7 +235,7 @@ export default function Hero() {
       {/* Scroll down indicator */}
       {mounted && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-foreground/30 cursor-pointer hover:text-primary transition-colors duration-300"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-foreground/70 cursor-pointer hover:text-primary transition-colors duration-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}

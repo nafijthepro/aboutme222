@@ -73,6 +73,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Live Demo of ${project.title}`}
             >
               <ExternalLink className="h-4 w-4 mr-2" />
               Live Demo

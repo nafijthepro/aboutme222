@@ -43,18 +43,23 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center p-4 bg-background/80 backdrop-blur-sm rounded-t-lg shadow-md">
           <div className="flex items-center space-x-4">
             {socialLinks.map((social) => (
-              <a
+              <Button
                 key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="me noopener noreferrer"
-                aria-label={`Nafij Rahaman on ${social.name}`}
-                className="group"
+                variant="ghost"
+                size="icon"
+                asChild
+                className="text-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-full transform hover:-translate-y-2 hover:scale-125 hover:rotate-12 hover:shadow-lg hover:shadow-primary/30"
               >
-                <Button variant="ghost" size="icon" className="text-foreground/60 hover:text-primary hover:bg-primary/10 transition-all duration-300 rounded-full transform hover:-translate-y-2 hover:scale-125 hover:rotate-12 hover:shadow-lg hover:shadow-primary/30">
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="me noopener noreferrer"
+                  aria-label={`Nafij Rahaman on ${social.name}`}
+                  className="group"
+                >
                   <social.icon className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
-                </Button>
-              </a>
+                </a>
+              </Button>
             ))}
           </div>
           <p className="mt-4 text-xs text-foreground/50 flex items-center hover:text-foreground/80 transition-colors duration-300 cursor-pointer">

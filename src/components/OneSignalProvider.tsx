@@ -29,6 +29,8 @@ const OneSignalProvider = () => {
             safari_web_id: "web.onesignal.auto.428d294a-5ce2-44bb-bee0-dec3149a5564",
             allowLocalhostAsSecureOrigin: true,
             autoPrompt: true,
+          }).catch((err: any) => {
+            console.warn("OneSignal initialization skipped:", err.message || err);
           });
         } catch (error) {
           // Silenced — expected to fail on non-HTTPS

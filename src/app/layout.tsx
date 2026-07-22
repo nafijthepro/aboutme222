@@ -5,6 +5,14 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
 import OneSignalProvider from '@/components/OneSignalProvider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
@@ -81,7 +89,7 @@ export const viewport = {
   themeColor: '#29abe2',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
 };
 
 export default async function RootLayout({
@@ -95,14 +103,10 @@ export default async function RootLayout({
   const siteUrl = `${protocol}://${host}`;
 
   return (
-    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className={cn('!scroll-smooth', inter.variable)} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://cdn.onesignal.com" />
+        <link rel="preconnect" href="https://api.onesignal.com" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#29abe2" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -238,6 +242,7 @@ export default async function RootLayout({
           <OneSignalProvider />
           {children}
           <Toaster />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

@@ -17,7 +17,7 @@ export default function CyberDivider({ className, symbol }: CyberDividerProps) {
       <div className="max-w-7xl mx-auto relative">
         <div className="cyber-divider" />
         {symbol && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-xs text-primary/60 tracking-[0.3em] uppercase font-mono">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 text-xs text-primary/95 tracking-[0.3em] uppercase font-mono">
             {symbol}
           </div>
         )}
